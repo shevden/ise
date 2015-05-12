@@ -41,7 +41,7 @@ public class StopSearchSessionRestService {
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response jsonRest3(String input, @Context HttpServletRequest request) {
+    public Response jsonRest4(String input, @Context HttpServletRequest request) {
         HttpSession session = request.getSession();
         SessionDataContainer sessionDataContainer =
                 (SessionDataContainer) session.getAttribute(AttributeConstant.SESSION_DATA_CONTAINER);

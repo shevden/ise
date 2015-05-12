@@ -5,14 +5,14 @@ import org.json.JSONObject;
 import javax.ejb.Stateless;
 
 @Stateless
-public class LongJsonParser implements JsonParser<Long> {
+public class LongJsonParser {//implements JsonParser<Long> {
 
-    public static final String INTEGER_NUMBER_CODE = "i";
+    public static final String LONG_NUMBER_CODE = "l";
 
-    @Override
+    //@Override
     public Long parseJson(String json) {
         JSONObject jsonObject = new JSONObject(json);
-        String longValue = jsonObject.getString(INTEGER_NUMBER_CODE);
+        String longValue = jsonObject.getString(LONG_NUMBER_CODE);
         try {
             return Long.parseLong(longValue);
         } catch (NumberFormatException e){

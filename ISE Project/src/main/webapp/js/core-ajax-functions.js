@@ -47,7 +47,7 @@
                 document.getElementById(boxId).innerHTML = contentToDisplay;
             }
         };
-        xmlhttp.open("GET", serviceURL,  true);
+        xmlhttp.open("GET", serviceURL,  false);
         xmlhttp.send();
     }
 
@@ -62,7 +62,28 @@
     }
 
     function getQuestion(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var response = xmlhttp.responseText;
+                var json = JSON.parse(response);
+                document.getElementById('question-box').innerHTML = json.description;
+            }
+        };
+        xmlhttp.open("GET", 'api/jsr/question',  false);
+        xmlhttp.send();
     }
 
-    function postAnswer(){
+    function postAnswer(answerOptionCode){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "api/jsr/answer", false);
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlhttp.send('{"c":"' + answerOptionCode + '"}');
+    }
+
+    function postStopSession(){
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", "api/jsr/stopSession", false);
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlhttp.send(JSON.stringify({l:document.getElementById('answer-id-box').value}));
     }

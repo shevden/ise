@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import javax.ejb.Stateless;
 
 @Stateless
-public class AnswerTypeJsonParser implements JsonParser<AnswerType> {
+public class AnswerTypeJsonParser {// implements JsonParser<AnswerType> {
 
     public static final String ANSWER_OPTION_CODE = "c";
 
