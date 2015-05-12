@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: WHITE;
+    font-size: 12px;
+    line-height: 1.6em;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: center;
+    background: #c7c8c1 url(../../images/global/background_pattern.png) repeat;
+}
+
+a, a:link, a:visited {
+    color: #525111;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: WHITE;;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0 0 30px;
+    padding: 5px 0
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0 0 25px;
+    padding: 5px 0
+}
+
+h3 {
+    font-size: 20px;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+h4 {
+    font-size: 16px;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+h5 {
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+h6 {
+    font-size: 12px;
+    margin: 0 0 5px;
+    padding: 0;
+    font-weight: 700
+}

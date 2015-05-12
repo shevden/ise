@@ -1,0 +1,87 @@
+#label-wrapper {
+    width: 100%;
+    height: 50px;
+}
+
+#label {
+    width: 1000px;
+    height: 50px;
+    margin: 0;
+    text-align: center;
+    float: right;
+}
+
+#label > form {
+    width: 1000px;
+    height: 50px;
+}
+
+#login-label-container {
+    width: 40px;
+    margin-right: 0;
+    color: #2E8B57;
+}
+
+#register-label-container {
+    width: 150px;
+}
+
+#register-label-container > a {
+    color: #D2691E;
+}
+
+#logout-label-container {
+    height: auto;
+    color: #2E8B57;
+    padding-top: 5px;
+}
+
+#avatar-window {
+    border: 3px solid #8FBC8F;
+    border-radius: 6px;
+    width: 45px;
+    height: 45px;
+    float: right;
+    margin-top: 2px;
+}
+
+#change-lang-block {
+    float: right;
+    clear: both;
+    margin-right: 20px;
+}
+
+#change-lang-block select {
+    margin-right: 3px;
+    font-weight: bold;
+}
+
+.login-error-block {
+    height: 18px;
+    text-align: left;
+    margin-left: 222px;
+    clear: both;
+}
+
+.submit-btn {
+    font-size: 12px;
+    color: #000;
+    border: 1px solid #adada3;
+    background: #e9e9e9;
+    padding: 5px 14px;
+    margin: 10px 20px 10px 10px;
+}
+
+.field-container {
+    margin: 10px;
+    padding-top: 2px;
+    float: right
+}
+
+.label-container {
+    margin: 10px;
+    padding-top: 3px;
+    float: right
+}
+
+

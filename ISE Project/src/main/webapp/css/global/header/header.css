@@ -1,0 +1,34 @@
+#header-wrapper {
+    width: 100%;
+    background: url(../../../images/global/header_border.png) center bottom no-repeat
+}
+
+#header {
+    width: 820px;
+    min-height: 110px;
+    padding: 20px 0 0 0;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+
+#site-title {
+    display: block;
+    margin: 0 auto;
+    font-size: 300%;
+    font-weight: bold;
+    width: 600px;
+    height: 36px;
+    padding-top: 126px;
+    background: url(../../../images/global/logo.png) no-repeat top center;
+    color: #000000;
+    letter-spacing: 2px;
+}
+
+#header #intro-text {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#js-error-block {
+    color: #993333;
+}

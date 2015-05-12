@@ -1,0 +1,17 @@
+#menu {
+    text-align: center;
+    height: 32px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+#menu li {
+    display: inline;
+    margin: 5px 15px;
+}
+
+#menu li a {
+    font-size: 1.5em;
+    font-weight: bold;
+}

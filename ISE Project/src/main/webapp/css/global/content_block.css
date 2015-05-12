@@ -1,0 +1,157 @@
+
+#main-wrapper {
+    width: 100%;
+}
+
+#main {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+#content {
+    width: 820px;
+    position: relative;
+}
+
+.section {
+    position: relative;
+    float: left;
+    width: 920px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.section h1 {
+    font-size: 1.9em;
+    font-weight: bold;
+    color: WHITE;
+}
+
+.big-button {
+    width: 10em;
+    display: block;
+    margin: 20px;
+    font-size: 1.7em;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    outline:none;
+}
+
+.medium-button {
+    width: 7em;
+    display: block;
+    margin: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    outline:none;
+}
+
+.question-block {
+    margin: 0 auto;
+    width: 20em;
+}
+
+#Answer page
+
+.answer-block {
+    width: 175px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.answer-image-wrapper {
+    width: 450px;
+    height: 300px;
+    float: left;
+    margin-top: 17px;
+    margin-right: 20px;
+}
+
+.answer-image {
+    width: 450px;
+    height: 300px;
+}
+
+.answer-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.answer-text {
+    font-size: 0.9em;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.listing-box {
+    border-radius: 5px;
+    border: 2px solid #BDBDBD;
+    padding: 20px;
+    width: 300px; height: 300px;
+    background: WHITE;
+    float: left;
+    color: BLACK;
+    text-align: left;
+    overflow: scroll;
+}
+
+.listing-box > div {
+    width: 500px;
+}
+
+.rounded-text-input {
+    border-bottom-color: #b3b3b3;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: #b3b3b3;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: #b3b3b3;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: #b3b3b3;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.standard-text-input {
+    width: 14em;
+    height: 1.5em;
+}
+
+.header-text {
+    font-size: 2em;
+}
+
+#entropy-label {
+    float: left;
+    margin-left: 160px;
+}
+
+#probability-label {
+    float: right;
+    margin-right: 150px;
+}
+
+#listing-controls-box {
+    width: 232px;
+    height: 400px;
+    float: left;
+}
+
+#listing-controls-answer-box {
+    width: 200px;
+    float: left;
+    margin: 0 34px;
+}
