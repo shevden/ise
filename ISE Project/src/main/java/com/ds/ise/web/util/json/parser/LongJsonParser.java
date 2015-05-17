@@ -5,11 +5,10 @@ import org.json.JSONObject;
 import javax.ejb.Stateless;
 
 @Stateless
-public class LongJsonParser {//implements JsonParser<Long> {
+public class LongJsonParser {
 
-    public static final String LONG_NUMBER_CODE = "l";
+    public static final String LONG_NUMBER_CODE = "longValue";
 
-    //@Override
     public Long parseJson(String json) {
         JSONObject jsonObject = new JSONObject(json);
         String longValue = jsonObject.getString(LONG_NUMBER_CODE);

@@ -1,4 +1,4 @@
-package com.ds.ise.web.rest;
+package com.ds.ise.service.processor;
 
 import com.ds.ise.data.dao.AnswerDAO;
 import com.ds.ise.data.dao.ItemDAO;
@@ -11,21 +11,13 @@ import com.ds.ise.entity.additional.AnswerType;
 import com.ds.ise.web.constant.AttributeConstant;
 import com.ds.ise.web.util.json.parser.LongJsonParser;
 
-import javax.annotation.ManagedBean;
 import javax.ejb.EJB;
-import javax.servlet.http.HttpServletRequest;
+import javax.ejb.Stateful;
 import javax.servlet.http.HttpSession;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 import java.util.Map;
 
-@ManagedBean
-@Path("/jsr/stopSession")
-public class StopSearchSessionRestService {
+@Stateful
+public class StopSearchSessionProcessor {
 
     @EJB
     private LongJsonParser jsonParser;
@@ -39,10 +31,7 @@ public class StopSearchSessionRestService {
     @EJB
     private SessionDataContainerFactory sessionDataContainerFactory;
 
-    @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response jsonRest4(String input, @Context HttpServletRequest request) {
-        HttpSession session = request.getSession();
+    public void process(String input, HttpSession session){
         SessionDataContainer sessionDataContainer =
                 (SessionDataContainer) session.getAttribute(AttributeConstant.SESSION_DATA_CONTAINER);
         Long itemId = jsonParser.parseJson(input);
@@ -63,7 +52,6 @@ public class StopSearchSessionRestService {
             }
         }
         sessionDataContainerFactory.prepareForReuse(sessionDataContainer);
-
-        return Response.status(200).build();
     }
+
 }

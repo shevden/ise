@@ -14,7 +14,7 @@
     <link href="css/global/content_block.css" type="text/css" rel="stylesheet"/>
     <link href="css/global/footer.css" type="text/css" rel="stylesheet"/>
 </head>
-<body onload="fulfillEntropyBox(); fulfillProbabilityBox(); getQuestion()">
+<body onload="onLoadAdmin();">
 
 <div id="label-wrapper">
 
@@ -55,14 +55,14 @@
 
             <div id="listing-controls-box">
                 <input type="text" id="answer-id-box" class="standard-text-input rounded-text-input"/>
-                <input type="submit" value="Stop" class="medium-button" style="color: #B40404; width: 11.2em;" onclick="postStopSession(); fulfillEntropyBox(); fulfillProbabilityBox(); getQuestion();"/>
+                <input type="submit" value="Stop" class="medium-button" style="color: #B40404; width: 11.2em;" onclick="stopSearchSession();"/>
 
                 <div id="listing-controls-answer-box">
-                    <input type="submit" value="Yes" class="medium-button" onclick="postAnswer(0); fulfillEntropyBox(); fulfillProbabilityBox(); getQuestion();"/>
-                    <input type="submit" value="No" class="medium-button" onclick="postAnswer(1); fulfillEntropyBox(); fulfillProbabilityBox(); getQuestion();"/>
-                    <input type="submit" value="Probably yes" class="medium-button" onclick="postAnswer(2); fulfillEntropyBox(); fulfillProbabilityBox(); getQuestion();"/>
-                    <input type="submit" value="Probably no" class="medium-button" onclick="postAnswer(3); fulfillEntropyBox(); fulfillProbabilityBox(); getQuestion();"/>
-                    <input type="submit" value="Don't know" class="medium-button" onclick="postAnswer(4); fulfillEntropyBox(); fulfillProbabilityBox(); getQuestion();"/>
+                    <input type="submit" value="Yes" class="medium-button" onclick="answerAdmin(0);"/>
+                    <input type="submit" value="No" class="medium-button" onclick="answerAdmin(1);"/>
+                    <input type="submit" value="Probably yes" class="medium-button" onclick="answerAdmin(2);"/>
+                    <input type="submit" value="Probably no" class="medium-button" onclick="answerAdmin(3);"/>
+                    <input type="submit" value="Don't know" class="medium-button" onclick="answerAdmin(4);"/>
                 </div>
             </div>
             <div class="listing-box">
