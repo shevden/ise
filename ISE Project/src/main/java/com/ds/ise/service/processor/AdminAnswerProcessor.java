@@ -24,7 +24,7 @@ public class AdminAnswerProcessor {
                 (SessionDataContainer) session.getAttribute(AttributeConstant.SESSION_DATA_CONTAINER);
         AnswerType answer = jsonParser.parseJson(input);
         sessionDataContainer.addAnswerToQuestion(answer);
-        sessionDataContainer.nullifyLastAskedQuestion();
         probabilityCalculator.recalculateProbability(sessionDataContainer);
+        sessionDataContainer.nullifyLastAskedQuestion();
     }
 }

@@ -39,19 +39,23 @@ public class StopSearchSessionProcessor {
             if (item.getId() == itemId) {
                 item.incrementRequests();
                 itemDAO.update(item);
-                Map<Item, Answer> iterable;
-                Answer updateTarget;
-                for (Map.Entry<Question, AnswerType> entry : sessionDataContainer.getQuestionsAnswers().entrySet()) {
-                    iterable = sessionDataContainer.getRepositoryContainer().getAnswers().get(entry.getKey());
-                    updateTarget = iterable.get(item);
-                    updateTarget.incrementAsks();
-                    updateTarget.incrementOptionRequestsValue(entry.getValue());
-                    answerDAO.update(updateTarget);
-                }
-                break;
+                processBoundedAnswers(sessionDataContainer, item);
+                sessionDataContainerFactory.prepareForReuse(sessionDataContainer);
+                return;
             }
         }
-        sessionDataContainerFactory.prepareForReuse(sessionDataContainer);
+    }
+
+    private void processBoundedAnswers(SessionDataContainer sessionDataContainer, Item item) {
+        Map<Item, Answer> iterable;
+        Answer updateTarget;
+        for (Map.Entry<Question, AnswerType> entry : sessionDataContainer.getQuestionsAnswers().entrySet()) {
+            iterable = sessionDataContainer.getRepositoryContainer().getAnswers().get(entry.getKey());
+            updateTarget = iterable.get(item);
+            updateTarget.incrementAsks();
+            updateTarget.incrementOptionRequestsValue(entry.getValue());
+            answerDAO.update(updateTarget);
+        }
     }
 
 }
