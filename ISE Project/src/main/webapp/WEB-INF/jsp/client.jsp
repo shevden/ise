@@ -14,7 +14,7 @@
     <link href="css/global/content_block.css" type="text/css" rel="stylesheet" />
     <link href="css/global/footer.css" type="text/css" rel="stylesheet" />
 </head>
-<body>
+<body onload="onLoadClient();">
 
 <div id="label-wrapper">
 
@@ -37,16 +37,16 @@
 </div>
 
 <div id="main-wrapper">
-
     <div id="main">
-        <div class="section" id="addNewCustomer">
-            <h1>Have you seen some orcs in this game?</h1>
+        <div id="question-box" class="header-text">
+        </div>
+        <div class="section">
                 <div class="question-block">
-                    <input type="submit" value="Yes" class="big-button"/>
-                    <input type="submit" value="No" class="big-button"/>
-                    <input type="submit" value="Probably yes" class="big-button"/>
-                    <input type="submit" value="Probably no" class="big-button"/>
-                    <input type="submit" value="Don't know" class="big-button"/>
+                    <input type="submit" value="Yes" class="big-button" onclick="postAnswer(0);"/>
+                    <input type="submit" value="No" class="big-button" onclick="postAnswer(1);"/>
+                    <input type="submit" value="Probably yes" class="big-button" onclick="postAnswer(2);"/>
+                    <input type="submit" value="Probably no" class="big-button" onclick="postAnswer(3);"/>
+                    <input type="submit" value="Don't know" class="big-button" onclick="postAnswer(4);"/>
                 </div>
         </div>
     </div>
@@ -58,6 +58,7 @@
     </div>
 </div>
 
+<script type="text/javascript" src="js/core-ajax-functions.js"></script>
 </body>
 
 </html>

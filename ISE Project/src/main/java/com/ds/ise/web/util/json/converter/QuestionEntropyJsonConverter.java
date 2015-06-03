@@ -23,7 +23,7 @@ public class QuestionEntropyJsonConverter {
             Double entropy = questionEntropy.getValue();
             JSONObject element = new JSONObject();
             element.put(ID, question.getId());
-            element.put(ENTROPY, entropy);
+            element.put(ENTROPY, String.format("%.7f", entropy));
             element.put(DESCRIPTION, question.getDescription());
             jsonArray.put(element);
         }

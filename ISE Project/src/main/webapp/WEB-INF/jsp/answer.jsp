@@ -16,7 +16,7 @@
     <link href="css/registration/registration.css" type="text/css" rel="stylesheet" />
     <link href="css/registration/avatar_loader.css" type="text/css" rel="stylesheet" />
 </head>
-<body>
+<body onload="fulfillResult();">
 
 <div id="label-wrapper">
     <div id="label">
@@ -34,30 +34,27 @@
 <div id="main-wrapper">
     <div id="main">
         <div class="section" id="addNewCustomer">
-            <h1>Bastion</h1>
+            <div id="title-box" class="answer-title" style"font-size: 3em"></div>
             <div>
-
-                    <form method="post" id="addNewCustomerForm" action="registration">
                         <div class="answer-image-wrapper">
-                            <img id="cover" class="answer-image center" src="images/bastion.jpg" >
+                            <img id="cover-box" class="answer-image center"/>
                         </div>
                         <div class="answer-block">
                             <div class="answer-title">Genre:</div>
-                            <div class="answer-text">Action, Indie, RPG</div>
+                            <div id="genre-box" class="answer-text"></div>
                             <div class="answer-title">Publisher:</div>
-                            <div class="answer-text">Warner Bros. Interactive Entertainment	</div>
+                            <div id="publisher-box" class="answer-text"></div>
                             <div class="answer-title">Developer:</div>
-                            <div class="answer-text">Supergiant Games</div>
+                            <div id="developer-box" class="answer-text"></div>
                             <div class="answer-title">Release Date:</div>
-                            <div class="answer-text">16 Aug, 2011</div>
+                            <div id="release-date-box" class="answer-text"></div>
                             <div class="answer-title">Description:</div>
-                            <div class="answer-text">Bastion is an action role-playing experience that redefines storytelling in games, with a reactive narrator who marks your every move. Explore more than 40 lush hand-painted environments as you discover the secrets of the Calamity, a surreal catastrophe that shattered the world to pieces. Wield a huge arsenal of upgradeable weapons and battle savage beasts adapted to their new habitat. Finish the main story to unlock the New Game Plus mode and continue your journey! </div>
+                            <div id="description-box"  class="answer-text"></div>
                         </div>
                         <div style="width: 100%; height: 70px; float: left; margin-top: 10px;">
-                            <input type="submit" value="Yes, this one" id="submit" class="big-button" style="width: 13em; float: left;"/>
-                            <input type="reset" value="No, continue to search" id="reset" class="big-button right" style="width: 13em; float: right;"/>
+                            <input type="submit" onclick="commitResult();" value="Yes, this one" id="submit" class="big-button" style="width: 13em; float: left;"/>
+                            <input type="reset" onclick="continueSearch();" value="No, continue to search" id="reset" class="big-button right" style="width: 13em; float: right;"/>
                         </div>
-                    </form>
             </div>
         </div>
     </div>
@@ -69,6 +66,7 @@
     </div>
 </div>
 
+<script type="text/javascript" src="js/core-ajax-functions.js"></script>
 </body>
 
 </html>

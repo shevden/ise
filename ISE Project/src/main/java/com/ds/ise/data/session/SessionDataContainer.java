@@ -16,12 +16,15 @@ public class SessionDataContainer {
     private Map<Item, Double> itemProbabilities;
     private Map<Question, Double> questionEntropies;
     private Question lastAskedQuestion;
+    private Item resultItem;
+    private int searchRoundNumber;
 
     public SessionDataContainer(RepositoryContainer repositoryContainer){
         this.repositoryContainer = repositoryContainer;
         questionsAnswers = new LinkedHashMap<>();
         itemProbabilities = new LinkedHashMap<>();
         questionEntropies = new LinkedHashMap<>();
+        initSearchRoundNumber();
     }
 
     public void addAnswerToQuestion(AnswerType answer){
@@ -39,6 +42,7 @@ public class SessionDataContainer {
     public void clearAskedQuestions(){
         questionsAnswers.clear();
         lastAskedQuestion = null;
+        initSearchRoundNumber();
     }
 
     public RepositoryContainer getRepositoryContainer() {
@@ -65,4 +69,27 @@ public class SessionDataContainer {
         this.lastAskedQuestion = lastAskedQuestion;
     }
 
+    public int getNumberOfQuestionsAsked(){
+        return questionsAnswers.size();
+    }
+
+    public Item getResultItem() {
+        return resultItem;
+    }
+
+    public void setResultItem(Item resultItem) {
+        this.resultItem = resultItem;
+    }
+
+    public int getSearchRoundNumber() {
+        return searchRoundNumber;
+    }
+
+    public void initSearchRoundNumber() {
+        searchRoundNumber = 1;
+    }
+
+    public void incrementSearchRoundNumber(){
+        ++searchRoundNumber;
+    }
 }

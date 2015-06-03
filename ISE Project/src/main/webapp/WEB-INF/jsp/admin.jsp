@@ -38,7 +38,7 @@
 <div id="main-wrapper">
 
     <div id="main">
-        <div id="question-box" class="header-text">
+        <div id="question-box" class="header-text" style="padding-bottom: 20px;">
         </div>
         <div>
             <div id="entropy-label">
@@ -48,7 +48,7 @@
                 <h2>Probability:</h2>
             </div>
         </div>
-        <div class="section" id="addNewCustomer">
+        <div class="section">
             <div class="listing-box">
                 <div id="entropy-box"></div>
             </div>
@@ -58,11 +58,11 @@
                 <input type="submit" value="Stop" class="medium-button" style="color: #B40404; width: 11.2em;" onclick="stopSearchSession();"/>
 
                 <div id="listing-controls-answer-box">
-                    <input type="submit" value="Yes" class="medium-button" onclick="answerAdmin(0);"/>
-                    <input type="submit" value="No" class="medium-button" onclick="answerAdmin(1);"/>
-                    <input type="submit" value="Probably yes" class="medium-button" onclick="answerAdmin(2);"/>
-                    <input type="submit" value="Probably no" class="medium-button" onclick="answerAdmin(3);"/>
-                    <input type="submit" value="Don't know" class="medium-button" onclick="answerAdmin(4);"/>
+                    <input type="submit" value="Yes" class="medium-button" onclick="postAnswer(0);"/>
+                    <input type="submit" value="No" class="medium-button" onclick="postAnswer(1);"/>
+                    <input type="submit" value="Probably yes" class="medium-button" onclick="postAnswer(2);"/>
+                    <input type="submit" value="Probably no" class="medium-button" onclick="postAnswer(3);"/>
+                    <input type="submit" value="Don't know" class="medium-button" onclick="postAnswer(4);"/>
                 </div>
             </div>
             <div class="listing-box">

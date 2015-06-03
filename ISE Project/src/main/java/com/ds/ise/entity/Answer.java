@@ -72,7 +72,7 @@ public class Answer implements Serializable {
         answer.probablePositive = 1;
         answer.probableNegative = 1;
         answer.dontKnow = 1;
-        answer.asks = 1;
+        answer.asks = 5;
 
         return answer;
     }

@@ -23,7 +23,7 @@ public class ItemProbabilityJsonConverter {
             Double probability = itemProbability.getValue();
             JSONObject element = new JSONObject();
             element.put(ID, item.getId());
-            element.put(PROBABILITY, probability);
+            element.put(PROBABILITY, String.format("%.7f", probability));
             element.put(NAME, item.getName());
             jsonArray.put(element);
         }

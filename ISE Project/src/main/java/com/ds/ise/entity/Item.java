@@ -29,6 +29,24 @@ public class Item implements Serializable {
 	@Column(name = "requests")
 	private long requests;
 
+	@Column(name = "genre")
+	private String genre;
+
+	@Column(name = "publisher")
+	private String publisher;
+
+	@Column(name = "developer")
+	private String developer;
+
+	@Column(name = "release_date")
+	private String releaseDate;
+
+	@Column(name = "description")
+	private String description;
+
+	@Column(name = "cover_path")
+	private String coverPath;
+
 	@Override
 	public String toString() {
 		return "Item [id=" + id + ", name=" + name + ", requests="
@@ -64,4 +82,51 @@ public class Item implements Serializable {
 		++requests;
 	}
 
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String genre) {
+		this.genre = genre;
+	}
+
+	public String getPublisher() {
+		return publisher;
+	}
+
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
+
+	public String getDeveloper() {
+		return developer;
+	}
+
+	public void setDeveloper(String developer) {
+		this.developer = developer;
+	}
+
+	public String getReleaseDate() {
+		return releaseDate;
+	}
+
+	public void setReleaseDate(String releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getCoverPath() {
+		return coverPath;
+	}
+
+	public void setCoverPath(String coverPath) {
+		this.coverPath = coverPath;
+	}
 }

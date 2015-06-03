@@ -34,7 +34,13 @@ public class StopSearchSessionProcessor {
     public void process(String input, HttpSession session){
         SessionDataContainer sessionDataContainer =
                 (SessionDataContainer) session.getAttribute(AttributeConstant.SESSION_DATA_CONTAINER);
-        Long itemId = jsonParser.parseJson(input);
+        Long itemId;
+        if(input == null || input.isEmpty()){
+            itemId = sessionDataContainer.getResultItem().getId();
+            sessionDataContainer.setResultItem(null);
+        } else {
+            itemId = jsonParser.parseJson(input);
+        }
         for (Item item : sessionDataContainer.getRepositoryContainer().getItems()) {
             if (item.getId() == itemId) {
                 item.incrementRequests();

@@ -16,7 +16,7 @@ import java.io.IOException;
  * @author Denys Shevchenko
  * @version 1.0
  */
-@WebServlet("/question")
+@WebServlet("/client")
 public class QuestionServlet extends HttpServlet {
 
     private static final int serialVersionUID = 1;
@@ -27,8 +27,8 @@ public class QuestionServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         LOG.debug("Do GET started.");
-        LOG.debug("Do GET finished: forward on: " + PathConstant.PAGE_QUESTION);
-        RequestDispatcher dispatcher = request.getRequestDispatcher(PathConstant.PAGE_QUESTION);
+        LOG.debug("Do GET finished: forward on: " + PathConstant.PAGE_CLIENT);
+        RequestDispatcher dispatcher = request.getRequestDispatcher(PathConstant.PAGE_CLIENT);
         dispatcher.forward(request, response);
     }
 }

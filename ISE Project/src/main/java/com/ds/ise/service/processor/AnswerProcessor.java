@@ -11,7 +11,7 @@ import javax.ejb.Stateful;
 import javax.servlet.http.HttpSession;
 
 @Stateful
-public class AdminAnswerProcessor {
+public class AnswerProcessor {
 
     @EJB
     private AnswerTypeJsonParser jsonParser;

@@ -32,15 +32,15 @@ public class ProbabilityCalculator {
 
     private void recalculateProbability(SessionDataContainer sessionDataContainer,
                                         Map<Item, Answer> itemsAnswers, AnswerType answerType) {
-        boolean isAllBelowOne = true;
+        boolean allProbabilitiesBelowOne = true;
         for(Double probability: sessionDataContainer.getItemProbabilities().values()){
             if(probability > ONE_PROBABILITY_LIMIT){
-                isAllBelowOne = false;
+                allProbabilitiesBelowOne = false;
                 break;
             }
         }
         for (Item item : itemsAnswers.keySet()) {
-            recalculateItemProbability(sessionDataContainer, itemsAnswers, answerType, isAllBelowOne, item);
+            recalculateItemProbability(sessionDataContainer, itemsAnswers, answerType, allProbabilitiesBelowOne, item);
         }
     }
 
@@ -49,7 +49,7 @@ public class ProbabilityCalculator {
                                             boolean isAllBelowOne, Item item) {
         Answer answer = itemsAnswers.get(item);
         double oldValue = sessionDataContainer.getItemProbabilities().get(item);
-        double deltaValue = answer.getOptionRequestsValue(answerType) / answer.getAsks();
+        double deltaValue = ((double)answer.getOptionRequestsValue(answerType)) / answer.getAsks();
         double newValue = oldValue * deltaValue;
         if(isAllBelowOne){
             newValue *= PROBABILITY_INCREASE_STEP;
