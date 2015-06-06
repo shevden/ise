@@ -2,7 +2,7 @@ package com.ds.ise.web.listener;
 
 import com.ds.ise.data.session.SessionDataContainer;
 import com.ds.ise.data.session.SessionDataContainerFactory;
-import com.ds.ise.web.constant.AttributeConstant;
+import com.ds.ise.constant.AttributeConstant;
 import org.apache.log4j.Logger;
 
 import javax.ejb.EJB;

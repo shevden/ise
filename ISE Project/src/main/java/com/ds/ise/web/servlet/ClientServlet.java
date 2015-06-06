@@ -1,6 +1,6 @@
 package com.ds.ise.web.servlet;
 
-import com.ds.ise.web.constant.PathConstant;
+import com.ds.ise.constant.PathConstant;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;
@@ -17,11 +17,11 @@ import java.io.IOException;
  * @version 1.0
  */
 @WebServlet("/client")
-public class QuestionServlet extends HttpServlet {
+public class ClientServlet extends HttpServlet {
 
     private static final int serialVersionUID = 1;
 
-    private static final Logger LOG = Logger.getLogger(QuestionServlet.class);
+    private static final Logger LOG = Logger.getLogger(ClientServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

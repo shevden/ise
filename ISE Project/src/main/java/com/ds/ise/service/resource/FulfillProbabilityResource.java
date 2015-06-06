@@ -2,7 +2,7 @@ package com.ds.ise.service.resource;
 
 
 import com.ds.ise.data.session.SessionDataContainer;
-import com.ds.ise.web.constant.AttributeConstant;
+import com.ds.ise.constant.AttributeConstant;
 import com.ds.ise.web.util.json.converter.ItemProbabilityJsonConverter;
 import org.json.JSONObject;
 

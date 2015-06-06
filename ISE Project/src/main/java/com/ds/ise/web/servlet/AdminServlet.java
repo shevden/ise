@@ -1,6 +1,6 @@
 package com.ds.ise.web.servlet;
 
-import com.ds.ise.web.constant.PathConstant;
+import com.ds.ise.constant.PathConstant;
 import org.apache.log4j.Logger;
 
 import javax.servlet.RequestDispatcher;

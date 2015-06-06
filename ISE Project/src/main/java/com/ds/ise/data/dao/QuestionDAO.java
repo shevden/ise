@@ -11,8 +11,8 @@ public QuestionDAO() {
     super(Question.class);
 }
 
-public void delete(Question question) {
-    super.delete(question.getId(), Question.class);
+public void delete(long id) {
+    super.delete(id);
 }
 
 }

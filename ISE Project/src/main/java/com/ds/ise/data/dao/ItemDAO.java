@@ -14,8 +14,8 @@ public class ItemDAO extends CommonDAO<Item> {
         super(Item.class);
     }
 
-    public void delete(Item item) {
-        super.delete(item.getId(), Item.class);
+    public void delete(long id) {
+        super.delete(id);
     }
 
     public long getTotalRequestsNumber() {

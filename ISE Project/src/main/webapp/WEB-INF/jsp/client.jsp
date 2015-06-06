@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <jsp:directive.page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"/>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="u" %>
 
 <!DOCTYPE html>
 <html>
@@ -19,20 +20,25 @@
 <div id="label-wrapper">
 
     <div id="label">
-
         <!--<%-- User defined tag used. --%>-->
-        <!--<u:login user="${sessionScope.user}" errorMessage="${param.loginErrorMessage}"/>-->
+        <u:login user="${sessionScope.user}" errorMessage="${param.loginErrorMessage}"/>
     </div>
 
-    <div id="change-lang-block">
-
-        <!--<%-- User defined tag used. --%>-->
-        <!--<u:change_lang setLanguage="${requestScope.setLanguage}" appLanguages="${applicationScope.appLanguages}"/>-->
-    </div>
 </div>
 <div id="header-wrapper">
     <div id="header">
         <div id="site-title">Implicit Search Engine</div>
+    </div>
+    <div style="width: 14em; float: right; margin-right: 20px; margin-top: -150px;">
+    <c:choose>
+        <c:when test="${not empty user}">
+            <input type="submit" value="Add note" class="medium-button" onclick="window.location.replace('saveNote')" style="background-color: #89c187"/>
+            <input type="submit" value="List notes" class="medium-button" onclick="window.location.replace('noteList')" style="background-color: #6688c1"/>
+        </c:when>
+        <c:otherwise>
+            <p style="font-size: 1.3em;">Please, login to use note functions of this application.</p>
+        </c:otherwise>
+    </c:choose>
     </div>
 </div>
 

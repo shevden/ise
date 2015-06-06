@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<security>
+    <constraint>
+        <url-pattern>/admin</url-pattern>
+        <role>Admin</role>
+    </constraint>
+    <constraint>
+        <url-pattern>/notesList</url-pattern>
+        <role>Admin</role>
+        <role>Client</role>
+    </constraint>
+    <constraint>
+        <url-pattern>/note</url-pattern>
+        <role>Admin</role>
+        <role>Client</role>
+    </constraint>
+    <constraint>
+        <url-pattern>/saveNote</url-pattern>
+        <role>Admin</role>
+        <role>Client</role>
+    </constraint>
+</security>

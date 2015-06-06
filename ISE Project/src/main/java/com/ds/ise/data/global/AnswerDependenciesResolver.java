@@ -31,7 +31,7 @@ public class AnswerDependenciesResolver {
     }
 
     private void processQuestionDependencies(RepositoryContainer repositoryContainer, Question question) {
-        List<Answer> answers = answerDAO.findAnswersByQuestionId(question.getId());
+        List<Answer> answers = answerDAO.findByQuestionId(question.getId());
         Map<Item, Answer> itemAnswerMap = new LinkedHashMap<>();
         for (Item item : repositoryContainer.getItems()) {
             processItemDependenciesWithQuestion(question, answers, item, itemAnswerMap);

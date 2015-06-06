@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <jsp:directive.page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"/>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="u" %>
 
 <!DOCTYPE html>
 <html>
@@ -20,14 +21,9 @@
 
     <div id="label">
         <!--<%-- User defined tag used. --%>-->
-        <!--<u:login user="${sessionScope.user}" errorMessage="${param.loginErrorMessage}"/>-->
+        <u:login user="${sessionScope.user}" errorMessage="${param.loginErrorMessage}"/>
     </div>
 
-    <div id="change-lang-block">
-
-        <!--<%-- User defined tag used. --%>-->
-        <!--<u:change_lang setLanguage="${requestScope.setLanguage}" appLanguages="${applicationScope.appLanguages}"/>-->
-    </div>
 </div>
 <div id="header-wrapper">
     <div id="header">
@@ -55,7 +51,8 @@
 
             <div id="listing-controls-box">
                 <input type="text" id="answer-id-box" class="standard-text-input rounded-text-input"/>
-                <input type="submit" value="Stop" class="medium-button" style="color: #B40404; width: 11.2em;" onclick="stopSearchSession();"/>
+                <input type="submit" value="Stop" class="medium-button" style="color: #B40404; width: 11.2em;"
+                       onclick="stopSearchSession();"/>
 
                 <div id="listing-controls-answer-box">
                     <input type="submit" value="Yes" class="medium-button" onclick="postAnswer(0);"/>

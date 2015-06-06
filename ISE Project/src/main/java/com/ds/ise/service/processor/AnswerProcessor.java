@@ -3,7 +3,7 @@ package com.ds.ise.service.processor;
 import com.ds.ise.data.session.SessionDataContainer;
 import com.ds.ise.entity.additional.AnswerType;
 import com.ds.ise.logic.calculator.ProbabilityCalculator;
-import com.ds.ise.web.constant.AttributeConstant;
+import com.ds.ise.constant.AttributeConstant;
 import com.ds.ise.web.util.json.parser.AnswerTypeJsonParser;
 
 import javax.ejb.EJB;

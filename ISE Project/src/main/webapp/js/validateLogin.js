@@ -1,4 +1,5 @@
 document.getElementById("loginForm").onsubmit = function(){
+
     document.getElementById("jsErrorBlock").innerHTML = "";
 
     var email = document.getElementById("email").value;

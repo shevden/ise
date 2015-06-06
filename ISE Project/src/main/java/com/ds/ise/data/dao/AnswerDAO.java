@@ -17,11 +17,11 @@ public class AnswerDAO extends CommonDAO<Answer> {
 
     public void delete(Answer answer) {
         AnswerKey keyToDeleteBy = new AnswerKey(answer.getQuestionId(), answer.getItemId());
-        super.delete(keyToDeleteBy, Answer.class);
+        super.delete(keyToDeleteBy);
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
-    public List<Answer> findAnswersByQuestionId(long questionId){
+    public List<Answer> findByQuestionId(long questionId){
         return findFilteredResults(QUESTION_ID_FIELD, questionId);
     }
 

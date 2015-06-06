@@ -4,7 +4,7 @@ package com.ds.ise.web.rest;
 import com.ds.ise.data.session.SessionDataContainer;
 import com.ds.ise.logic.trigger.AnswerTrigger;
 import com.ds.ise.service.processor.AnswerProcessor;
-import com.ds.ise.web.constant.AttributeConstant;
+import com.ds.ise.constant.AttributeConstant;
 import org.apache.log4j.Logger;
 
 import javax.annotation.ManagedBean;

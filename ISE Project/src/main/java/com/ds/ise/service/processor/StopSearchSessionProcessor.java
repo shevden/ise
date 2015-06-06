@@ -8,7 +8,7 @@ import com.ds.ise.entity.Answer;
 import com.ds.ise.entity.Item;
 import com.ds.ise.entity.Question;
 import com.ds.ise.entity.additional.AnswerType;
-import com.ds.ise.web.constant.AttributeConstant;
+import com.ds.ise.constant.AttributeConstant;
 import com.ds.ise.web.util.json.parser.LongJsonParser;
 
 import javax.ejb.EJB;

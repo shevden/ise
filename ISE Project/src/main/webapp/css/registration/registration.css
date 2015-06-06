@@ -54,10 +54,11 @@ h4 {
 
 #does-user-exists-block {
     font-size: 0.8em;
-    color: #993333;
+    color: #f44543;
     width: 150px;
     height: 30px;
     float: right;
     clear: both;
-    margin-top: -347px;
+    margin-top: -280px;
+    margin-right: 100px;
 }

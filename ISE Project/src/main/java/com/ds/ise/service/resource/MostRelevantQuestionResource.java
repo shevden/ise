@@ -3,7 +3,7 @@ package com.ds.ise.service.resource;
 import com.ds.ise.data.session.SessionDataContainer;
 import com.ds.ise.entity.Question;
 import com.ds.ise.logic.calculator.EntropyCalculator;
-import com.ds.ise.web.constant.AttributeConstant;
+import com.ds.ise.constant.AttributeConstant;
 import com.ds.ise.web.util.json.converter.QuestionJsonConverter;
 import org.json.JSONObject;
 

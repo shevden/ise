@@ -27,8 +27,8 @@ public abstract class CommonDAO<T> implements Serializable {
         entityManager.persist(entity);
     }
 
-    protected void delete(Object id, Class<T> clazz) {
-        T entityToRemove = entityManager.getReference(clazz, id);
+    protected void delete(Object id) {
+        T entityToRemove = entityManager.getReference(entityClass, id);
         entityManager.remove(entityToRemove);
     }
 
@@ -36,7 +36,7 @@ public abstract class CommonDAO<T> implements Serializable {
         return entityManager.merge(entity);
     }
 
-    public T find(int entityID) {
+    public T find(long entityID) {
         return entityManager.find(entityClass, entityID);
     }
 
